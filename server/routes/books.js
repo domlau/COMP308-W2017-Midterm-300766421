@@ -104,10 +104,19 @@ router.post('/:id', (req, res, next) => {
 
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
+  
+  //get reference of ID from url
+  let id= req.params.id;
 
-  /*****************
-   * ADD CODE HERE *
-   *****************/
+  book.remove({_id:id}, (err) => {
+    if(err){
+      console.log(err);
+      res.end(err);
+    } else{
+      //refresh game List
+      res.redirect('/books');
+    }
+  })
 });
 
 
