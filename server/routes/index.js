@@ -1,3 +1,8 @@
+/*Filename: books.js
+  Name: Dominic Lau
+  300766421
+  Web Application Name: COMP308-W2017-Midterm-300766421 */
+  
 // modules required for routing
 let express = require('express');
 let router = express.Router();
